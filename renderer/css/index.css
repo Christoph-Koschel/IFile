@@ -1,0 +1,215 @@
+@import "home.css";
+@import "filethree.css";
+
+@font-face {
+    src: url("../fonts/NotoSans-Regular.ttf");
+    font-family: NotoSans;
+}
+
+:root {
+    --primary-color: #a458d5;
+    --secondary-color: #462d9f;
+    --primary-font-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    font-family: NotoSans;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+.window {
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-auto-columns: 250px calc(100% - 250px);
+    grid-auto-rows: 30px calc(100% - 30px);
+    grid-template-areas: "titleBar titleBar" "menu body";
+    background-color: #ffffff;
+    grid-auto-flow: column;
+    border-radius: 40px;
+}
+
+.window.fullscreen {
+    border-radius: 0;
+}
+
+.window > .titleBar {
+    grid-area: titleBar;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+.window > .titleBar > .filer {
+    width: 250px;
+    height: 100%;
+    background-color: var(--primary-color);
+    float: left;
+}
+
+.window > .titleBar > .windowController {
+    float: right;
+    margin-right: 40px;
+    height: 30px;
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.window > .titleBar > .windowController > i {
+    width: 15px;
+    text-align: center;
+    font-size: 15px;
+    padding: 7.5px 15px;
+    -webkit-app-region: no-drag;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    color: var(--primary-font-color);
+}
+
+.window > .titleBar > .windowController > i:hover:not(#winClose) {
+    background-color: rgba(255,255,255,0.3);
+
+}
+
+.window > .titleBar > .windowController > i#winClose:hover {
+    border-bottom-right-radius: 10px;
+    background-color: #de1a2d;
+    color: white;
+}
+
+.window > .menu {
+    grid-area: menu;
+    color: var(--primary-font-color);
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
+}
+
+.window > .menu > div > h3 {
+    margin-top: 0;
+}
+
+.window > .menu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.window > .menu > ul > li {
+    padding: 5px 10px;
+    border-left: 5px solid transparent;
+    cursor: default;
+}
+
+.window > .menu > ul > li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.2s;
+}
+
+.window > .menu > ul > li:active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.window > .menu > ul > li.active {
+    border-left: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+.window > .menu > ul > li > span {
+    margin-left: 10px;
+}
+
+.window > .body {
+    grid-area: body;
+    padding: 20px;
+    display: grid;
+    grid-auto-rows: 60px calc(100% - 60px);
+}
+
+.window > .body > div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.window > .body > #path {
+    margin: 10px;
+    width: calc(100% - 10px * 2);
+}
+
+.window > .body > #path > input#pathEditor {
+    width: calc(100% - 20px * 2);
+    height: 100%;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--primary-font-color);
+}
+
+.window > .body > #path > #pathVisualizer {
+    width: calc(100% - 20px * 2);
+    height: 100%;
+    padding: 0 20px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: var(--primary-font-color);
+    border-radius: 20px;
+    display: flex;
+}
+
+.window > .body > #path > #pathVisualizer > span {
+    margin: auto 2px;
+    cursor: default;
+    padding: 2px;
+}
+
+.window > .body > #path > #pathVisualizer > span:hover:not(.pathSplitToken) {
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menuPointer {
+    position: fixed;
+    top: 85px;
+    left: calc(250px - 50px / 2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.menuPointer > #point {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    transition: 0.2s;
+}
+
+.menuPointer > #point:hover {
+    background-color: var(--primary-color);
+}
+
+.menuPointer > #point > i {
+    position: absolute;
+    top: 6.5px;
+    left: 6.5px;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    color: #ffffff;
+}

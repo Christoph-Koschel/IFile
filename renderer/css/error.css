@@ -1,0 +1,120 @@
+@font-face {
+    src: url("../fonts/NotoSans-Regular.ttf");
+    font-family: NotoSans;
+}
+
+:root {
+    --primary-color: #a458d5;
+    --secondary-color: #462d9f;
+    --primary-font-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+* {
+    font-family: NotoSans;
+}
+
+body {
+    margin: 0;
+}
+
+.window {
+    z-index: -2;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-auto-rows: 30px calc(100% - 30px);
+    grid-template-areas: "titleBar" "body";
+    background-color: #ffffff;
+    grid-auto-flow: column;
+    border-radius: 40px;
+}
+
+.window > #background {
+    z-index: -1;
+    position: absolute;
+    width: 250px;
+    margin-top: -30px;
+}
+
+.window > .titleBar {
+    grid-area: titleBar;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+.window > .titleBar > .windowController {
+    float: right;
+    margin-right: 40px;
+    height: 30px;
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.window > .titleBar > .windowController > i {
+    width: 15px;
+    text-align: center;
+    font-size: 15px;
+    padding: 7.5px 15px;
+    -webkit-app-region: no-drag;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    color: var(--primary-font-color);
+}
+
+.window > .titleBar > .windowController > i.disabled {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.window > .titleBar > .windowController > i:hover:not(#winClose):not(.disabled) {
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+.window > .titleBar > .windowController > i#winClose:hover {
+    border-bottom-right-radius: 10px;
+    background-color: #de1a2d;
+    color: white;
+}
+
+.window > .body {
+    grid-area: body;
+}
+
+.window > .body > div {
+    margin: 10px 40px 40px 40px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.05);
+    height: calc(100% - 40px - 10px - 5px * 2);
+    width: calc(100% - 40px * 2 - 5px * 2);
+    border-radius: 10px;
+}
+
+.window > .body > div > button#okBTN {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    padding: 5px 20px;
+    background: var(--primary-color);
+    border: 0;
+    border-radius: 5px;
+    color: var(--primary-font-color);
+}
+
+.window > .body > div > button#okBTN:hover {
+
+}
+
+.window > .body > div > button#okBTN:active {
+    background-color: var(--secondary-color);
+}
+
+

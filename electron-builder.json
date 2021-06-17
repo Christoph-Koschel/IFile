@@ -1,0 +1,12 @@
+{
+  "productName": "IFile",
+  "copyright": "Copyright © 2021 HexaStudio",
+  "asar": true,
+  "fileAssociations":{
+    "role": "Editor",
+    "ext": [
+      "*"
+    ],
+    "name": "Open in IFile"
+  }
+}

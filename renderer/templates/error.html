@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" href="../css/error.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css">
+    <script>window.addEventListener("load", require("../src/error").main)</script>
+</head>
+<body>
+<div class="window">
+    <svg id="background" preserveAspectRatio="xMidYMid" viewBox="0 0 250 300">
+        <g transform="translate(125,150) scale(1,1) translate(-125,-150)">
+            <linearGradient id="lg-0.19836162937334567" x1="0" x2="1" y1="0" y2="0">
+                <stop id="secondaryColor" stop-color="#ff00ff" offset="0"></stop>
+                <stop id="primaryColor" stop-color="#00ffff" offset="1"></stop>
+            </linearGradient>
+            <path d="" fill="url(#lg-0.19836162937334567)" opacity="0.4">
+                <animate attributeName="d" dur="33.333333333333336s" repeatCount="indefinite"
+                         keyTimes="0;0.333;0.667;1" calcmod="spline"
+                         keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="0s"
+                         values="M0 0L 0 210.15343341549857Q 31.25 176.0932511333801  62.5 152.99993970787452T 125 153.21933441221427T 187.5 28.657995663754548T 250 18.237878921890484L 250 0 Z;M0 0L 0 271.06800150683966Q 31.25 224.99769309957136  62.5 202.6408270300006T 125 120.06924186376415T 187.5 91.11001796140363T 250 7.509579700524398L 250 0 Z;M0 0L 0 196.45141615907448Q 31.25 241.20448612862504  62.5 215.0276125769435T 125 153.42808283302094T 187.5 109.54871334633984T 250 15.21657849966482L 250 0 Z;M0 0L 0 210.15343341549857Q 31.25 176.0932511333801  62.5 152.99993970787452T 125 153.21933441221427T 187.5 28.657995663754548T 250 18.237878921890484L 250 0 Z"></animate>
+            </path>
+            <path d="" fill="url(#lg-0.19836162937334567)" opacity="0.4">
+                <animate attributeName="d" dur="33.333333333333336s" repeatCount="indefinite"
+                         keyTimes="0;0.333;0.667;1" calcmod="spline"
+                         keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-11.111111111111112s"
+                         values="M0 0L 0 183.6223991003352Q 31.25 230.87426414089833  62.5 211.83900792008694T 125 86.35389480600718T 187.5 112.58881739175294T 250 -2.0452024461907286L 250 0 Z;M0 0L 0 186.63631785436607Q 31.25 176.5121704595323  62.5 147.2415071786316T 125 116.97634560378533T 187.5 108.6491231846864T 250 -17.414043287116414L 250 0 Z;M0 0L 0 180.62131484614244Q 31.25 195.9938233455013  62.5 151.51884408384484T 125 176.90686741421524T 187.5 89.67306172442022T 250 67.5203580570022L 250 0 Z;M0 0L 0 183.6223991003352Q 31.25 230.87426414089833  62.5 211.83900792008694T 125 86.35389480600718T 187.5 112.58881739175294T 250 -2.0452024461907286L 250 0 Z"></animate>
+            </path>
+            <path d="" fill="url(#lg-0.19836162937334567)" opacity="0.4">
+                <animate attributeName="d" dur="33.333333333333336s" repeatCount="indefinite"
+                         keyTimes="0;0.333;0.667;1" calcmod="spline"
+                         keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-22.222222222222225s"
+                         values="M0 0L 0 275.57809342685505Q 31.25 212.05464241365112  62.5 192.47369137086628T 125 114.00804587795852T 187.5 121.94233062126744T 250 28.54803557213023L 250 0 Z;M0 0L 0 274.3829240579702Q 31.25 209.19729770786114  62.5 182.92995717683425T 125 164.39824762247952T 187.5 61.276968494263514T 250 47.38792543963527L 250 0 Z;M0 0L 0 216.96981703688374Q 31.25 184.65881153487257  62.5 155.1372317241301T 125 92.34728000422193T 187.5 11.575705756412873T 250 -30.53838836145235L 250 0 Z;M0 0L 0 275.57809342685505Q 31.25 212.05464241365112  62.5 192.47369137086628T 125 114.00804587795852T 187.5 121.94233062126744T 250 28.54803557213023L 250 0 Z"></animate>
+            </path>
+        </g>
+    </svg>
+    <div class="titleBar">
+        <div class="windowController">
+            <i id="winMin" class="fal fa-window-minimize"></i>
+            <i id="winSize" class="fal fa-square disabled"></i>
+            <i id="winClose" class="fal fa-times"></i>
+        </div>
+    </div>
+    <div class="body">
+        <div>
+            <span><b>Error: </b><span id="title"></span></span>
+            <p id="message"></p>
+            <button id="okBTN">
+                OK
+            </button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

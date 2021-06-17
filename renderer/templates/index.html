@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFile</title>
+    <script src="../lib/include/include.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css">
+    <script>window.addEventListener("load", require("../src/index").main);</script>
+</head>
+<body>
+<div class="window">
+    <div class="titleBar">
+        <div class="filer">
+
+        </div>
+        <div class="windowController">
+            <i id="winMin" class="fal fa-window-minimize"></i>
+            <i id="winSize" class="fal fa-square"></i>
+            <i id="winClose" class="fal fa-times"></i>
+        </div>
+    </div>
+    <div class="menu">
+        <div style="text-align: center">
+            <h3>Christoph</h3>
+        </div>
+        <ul>
+            <li class="active"><i class="far fa-home-lg-alt"></i><span>Home</span></li>
+            <li id="shortcutUsers"><i class="far fa-users"></i><span>Users</span></li>
+            <li id="shortcutDesktop"><i class="far fa-desktop"></i><span>Desktop</span></li>
+            <li id="shortcutImages"><i class="far fa-images"></i><span>Images</span></li>
+            <li id="shortcutMovies"><i class="far fa-film-alt"></i><span>Videos</span></li>
+            <li id="shortcutDocuments"><i class="far fa-file-word"></i><span>Documents</span></li>
+            <li id="shortcutDownloads"><i class="far fa-folder-download"></i><span>Downloads</span></li>
+            <li id="shortcutMusic"><i class="far fa-music"></i><span>Music</span></li>
+        </ul>
+    </div>
+    <div class="body" id="body">
+        <div id="path">
+            <input style="display: none;" id="pathEditor" type="text">
+            <div id="pathVisualizer">
+
+            </div>
+        </div>
+        <!--        <div id="home">-->
+
+        <!--        </div>-->
+        <div id="fileThree">
+            <div style="height: 20px" class="tableWrapper" id="fileThreeTableWrapper">
+                <table>
+                    <thead>
+                    <tr>
+                        <td id="sortTokenImage">
+                            <i class="fas fa-sort-down"></i>
+                        </td>
+                        <td id="nameSortToken" class="tokenActive">
+                            Name
+                        </td>
+                        <td id="dateSortToken">
+                            Date modified
+                        </td>
+                        <td id="typeSortToken">
+                            Type
+                        </td>
+                        <td id="sizeSortToken">
+                            Size
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody id="fileThreeEntries">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="menuPointer">
+    <div id="point">
+        <i class="far fa-chevron-left"></i>
+    </div>
+</div>
+</body>
+</html>

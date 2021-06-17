@@ -1,0 +1,1 @@
+{"version":3,"file":"errorWindow.d.ts","sourceRoot":"","sources":["errorWindow.ts"],"names":[],"mappings":"AACA,OAAO,EAAC,uBAAuB,EAAC,MAAM,2BAA2B,CAAC;AAMlE,qBAAa,WAAW;IACpB,OAAO,CAAC,MAAM,CAAgB;IAC9B,OAAO,CAAC,OAAO,CAA0B;IACzC,OAAO,CAAC,MAAM,CAAC,YAAY,CAAqB;gBAE7B,OAAO,EAAE,uBAAuB;IA0C5C,IAAI;WAIG,IAAI;CAgBrB"}

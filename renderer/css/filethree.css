@@ -1,0 +1,46 @@
+#fileThree {
+    margin: 10px;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.05);
+    padding: 10px;
+    height: calc(100% - 20px *2);
+}
+
+#fileThree > .tableWrapper {
+    overflow: auto;
+}
+
+#fileThree > .tableWrapper > table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#fileThree > .tableWrapper > table > thead > tr {
+    border-bottom: 0.1px solid #00000042;
+}
+
+#fileThree > .tableWrapper > table > thead > tr > td {
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+#fileThree > .tableWrapper > table > thead > tr > td:first-of-type {
+    cursor: default;
+}
+
+#fileThree > .tableWrapper > table > thead > tr > td.tokenActive {
+    font-weight: bold;
+}
+
+#fileThree > .tableWrapper > table > tbody > tr:first-of-type > td {
+    padding-top: 5px;
+}
+
+#fileThree > .tableWrapper > table > tbody > tr > td {
+    padding-top: 3px;
+    cursor: default;
+}
+
+#fileThree > .tableWrapper > table > tbody > tr:hover {
+    background-color: rgba(0,0,0,0.1);
+}
